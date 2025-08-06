@@ -1,0 +1,36 @@
+# Arquivos de Log e Temporários Gerais
+*.log
+*.jou
+*.str
+*.rpt
+webtalk*.tcl
+webtalk*.xml
+
+# Vitis HLS
+solution*/
+.autopilot/
+*.ap_config.ini
+
+# Vivado
+*.runs/
+*.cache/
+*.gen/
+*.ip_user_files/
+*.ipdefs/
+*.iprepo/
+*.data/
+*.xpr.lock
+*.wdb
+*.wcfg
+
+# Vitis Software (Workspaces)
+*.vitis/
+*vitis_workspace/
+.Xil/
+.metadata/
+*build/
+*Debug/
+*Release/
+*.elf
+
+*reports/
