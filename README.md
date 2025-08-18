@@ -1,6 +1,6 @@
 <a id="topo"></a>
 
-FPGA Matrix Accelerator (16x16)
+## FPGA Matrix Accelerator (16x16)
 
 Este repositório contém um design completo de aceleração para multiplicação de matrizes 16x16 em FPGA, integrando:
 
