@@ -1,3 +1,5 @@
+<a id="topo"></a>
+
 FPGA Matrix Accelerator (16x16)
 
 Este repositório contém um design completo de aceleração para multiplicação de matrizes 16x16 em FPGA, integrando:
@@ -7,6 +9,16 @@ Este repositório contém um design completo de aceleração para multiplicaçã
 - Aplicação de teste em C para validar o acelerador via MicroBlaze
 
 ![Arquitetura no Vivado](docs/images/arquitetura_viv.png)
+
+## Navegação rápida
+
+- [Estrutura do repositório](#estrutura)
+- [Requisitos](#requisitos)
+- [Como clonar](#clonar)
+- [Fluxo resumido](#fluxo)
+- [Observações importantes](#observacoes)
+
+<a id="estrutura"></a>
 
 ## Estrutura do repositório
 
@@ -21,17 +33,59 @@ Target e ferramentas usadas:
 - Vitis HLS: 2024.2, 2025.1 e Classic
 - Vitis (SDK): 2025.1
 
+<!-- [Voltar ao topo](#topo) -->
+
+<a id="requisitos"></a>
+
+## Requisitos
+
+- Sistema: Windows 10/11 64-bit
+- Git com suporte a submódulos
+- Xilinx Vivado e Vitis instalados (versões em "Target e ferramentas usadas")
+- Licenças Xilinx ativas (Vivado/Vitis)
+- Drivers: JTAG (Xilinx/Digilent) e USB-UART (FTDI) para a sua placa
+- FPGA/placa compatível com XC7S50-CSGA324 (ou equivalente) com JTAG e UART
+
+<!-- [Voltar ao topo](#topo) -->
+
+<a id="clonar"></a>
+
 ## Como clonar
 
-Se este repositório utiliza o `hls` como submódulo, clone com submódulos:
+Este projeto usa `hls/` como submódulo git, apontando para o repositório:
+https://github.com/thallesmcs/Vitis_HLS.git
+
+Repositório principal:
+https://github.com/thallesmcs/fpga-matrix-accelerator.git
+
+Recomendado (clonar já trazendo o submódulo):
 
 ```powershell
-git clone --recurse-submodules <url-do-repositorio>
-# Se já clonou sem submódulos
+git clone --recurse-submodules https://github.com/thallesmcs/fpga-matrix-accelerator.git
+```
+
+Se você já clonou sem submódulos, inicialize/atualize depois:
+
+```powershell
+cd fpga-matrix-accelerator
 git submodule update --init --recursive
 ```
 
+Opcional: para atualizar o submódulo para a revisão mais recente da branch remota (cuidado, isso muda o ponteiro):
+
+```powershell
+git submodule update --remote --merge
+```
+
+Observação: baixar o repositório como ZIP não inclui submódulos. Prefira usar `git clone` com `--recurse-submodules`.
+
+<!-- [Voltar ao topo](#topo) -->
+
+<a id="fluxo"></a>
+
 ## Fluxo resumido
+
+Pré-requisito: confira "Requisitos" e siga "Como clonar" antes de iniciar.
 
 1) Hardware (Vivado)
 - Abra `Hardware/acel_matrizes.xpr` (Vivado 2025.1)
@@ -52,10 +106,16 @@ Detalhes por pasta estão nos READMEs locais:
 - `Software/README.md`
 - `hls/README.md` (já no submódulo)
 
+<!-- [Voltar ao topo](#topo) -->
+
+<a id="observacoes"></a>
+
 ## Observações importantes
 
 - A pasta `hls/` é um submódulo: evite editar o conteúdo diretamente aqui; faça alterações no repositório do submódulo e atualize o ponteiro.
 - O caminho do `.xsa` no `Software/platforms/` pode variar conforme a exportação. Ajuste no Vitis conforme o nome de arquivo que você exportar.
+
+[Voltar ao topo](#topo)
 
 <!-- ## Próximos passos sugeridos
 
