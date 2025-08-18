@@ -8,8 +8,14 @@ Esta aplicação em C verifica o funcionamento do acelerador de hardware para mu
 
 -   **Processador:** Esta aplicação foi desenvolvida para rodar em um processador **Microblaze**.
 -   **Acelerador:** Requer que o design de hardware contenha o IP de multiplicação de matrizes gerado pelo HLS.
+-   **AXI Timer:** Esta aplicação utiliza IP aberta da xilinx para comparar o tempo de execução.
 
 #### Plataforma Alvo
 
-Esta aplicação foi testada com a definição de hardware localizada em:
-`../../platforms/acel_matrizes/design_1_wrapper.xsa`
+Exporte o hardware (com bitstream) no Vivado para a pasta:
+`../../platforms/`
+
+Exemplo de arquivo de plataforma:
+`../../platforms/design_1_wrapper.xsa`
+
+Abra no Vitis 2025.1, crie a plataforma a partir do `.xsa`, depois crie/importe este projeto de aplicação e execute no MicroBlaze.
