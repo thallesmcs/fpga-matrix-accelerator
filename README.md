@@ -26,7 +26,7 @@ Este repositório contém um design completo de aceleração para multiplicaçã
 - `hls/` – Submódulo com projetos Vitis HLS (2024.2/2025.1) que geram os IPs. Veja `hls/README.md`.
 - `Software/` – Plataforma exportada (`.xsa`) e aplicação de teste para MicroBlaze. Veja `Software/README.md`.
 
-Target e ferramentas usadas:
+## Target e ferramentas usadas:
 
 - FPGA alvo: Xilinx Spartan-7 XC7S50-CSGA324
 - Vivado: 2025.1
