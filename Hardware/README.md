@@ -9,7 +9,7 @@ Este diretório contém o projeto Vivado que integra o MicroBlaze e o IP de mult
 
 ## Arquitetura
 
-![Arquitetura no Vivado](docs/images/arquitetura_viv.png)
+![Arquitetura no Vivado](../docs/images/arquitetura_viv.png)
 
 Design BD, com a IP HLS de multiplicação de matrizes, conexões AXI a periféricos e um MicroBlaze para controlar a comunicação.
 
