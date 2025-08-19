@@ -7,6 +7,12 @@ Este diretório contém o projeto Vivado que integra o MicroBlaze e o IP de mult
 - Constraints: `acel_matrizes.srcs/constrs_1/new/netlist.xdc`
 - Imagem de referência: `arquitetura_viv.png`
 
+## Arquitetura
+
+![Arquitetura no Vivado](docs/images/arquitetura_viv.png)
+
+Design BD, com a IP HLS de multiplicação de matrizes, conexões AXI a periféricos e um MicroBlaze para controlar a comunicação.
+
 ## Abrir e gerar bitstream
 
 1. Abra `acel_matrizes.xpr` no Vivado 2025.1
